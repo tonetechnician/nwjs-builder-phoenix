@@ -60,8 +60,18 @@ export class Downloader extends DownloaderBase {
         const partPlatform = this.handlePlatform(platform);
         const partArch = this.handleArch(arch);
         const partExtension = this.extensionByPlatform(platform);
+        
+        debug('in fetch', 'platform', partPlatform);
+        debug('in fetch', 'arch', partArch);
+        debug('in fetch', 'version', partVersion);
 
-        const url = `${ mirror }/${ partVersion }/nwjs${ partFlavor }-${ partVersion }-${ partPlatform }-${ partArch }.${ partExtension }`;
+        let url = ""
+        if (partPlatform == "osx" && partArch == "arm64" && partVersion.includes("0.70.0")) {
+            // https://github.com/corwin-of-amber/nw.js/releases/download/nw-v0.70.0/nwjs-sdk-v0.70.0-osx-arm64.zip
+            url = `https://github.com/corwin-of-amber/nw.js/releases/download/nw-${ partVersion }/nwjs${ partFlavor }-${ partVersion }-${ partPlatform }-${ partArch }.${ partExtension }`;
+        } else {
+            url = `${ mirror }/${ partVersion }/nwjs${ partFlavor }-${ partVersion }-${ partPlatform }-${ partArch }.${ partExtension }`;
+        }
         const filename = basename(url);
         const path = resolve(this.destination, filename);
 

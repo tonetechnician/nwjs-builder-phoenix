@@ -30,6 +30,7 @@ export interface IBuilderOptions {
     linux?: boolean;
     x86?: boolean;
     x64?: boolean;
+    arm64?: boolean;
     tasks?: string[];
     chromeApp?: boolean;
     mirror?: string;
@@ -47,6 +48,7 @@ export class Builder {
         linux: false,
         x86: false,
         x64: false,
+        arm64: false,
         tasks: [],
         chromeApp: false,
         mirror: Downloader.DEFAULT_OPTIONS.mirror,
@@ -72,7 +74,7 @@ export class Builder {
         const tasks: string[][] = [];
 
         [ 'win', 'mac', 'linux' ].map((platform) => {
-            [ 'x86', 'x64' ].map((arch) => {
+            [ 'x86', 'x64', 'arm64' ].map((arch) => {
                 if((<any>this.options)[platform] && (<any>this.options)[arch]) {
                     tasks.push([ platform, arch ]);
                 }
@@ -84,7 +86,7 @@ export class Builder {
             const [ platform, arch ] = task.split('-');
 
             if([ 'win', 'mac', 'linux' ].indexOf(platform) >= 0) {
-                if([ 'x86', 'x64' ].indexOf(arch) >= 0) {
+                if([ 'x86', 'x64', 'arm64' ].indexOf(arch) >= 0) {
                     tasks.push([ platform, arch ]);
                 }
             }
