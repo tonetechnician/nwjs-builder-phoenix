@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/evshiron/nwjs-builder-phoenix.git"
+    "url": "git+https://github.com/tonetechnician/nwjs-builder-phoenix.git"
   },
-  "author": "evshiron",
+  "author": "evshiron & tonetechnician",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/evshiron/nwjs-builder-phoenix/issues"
+    "url": "https://github.com/tonetechnician/nwjs-builder-phoenix/issues"
   },
-  "homepage": "https://github.com/evshiron/nwjs-builder-phoenix#readme",
+  "homepage": "https://github.com/tonetechnician/nwjs-builder-phoenix#readme",
   "devDependencies": {
     "@types/bluebird": "^3.5.3",
     "@types/debug": "0.0.29",
