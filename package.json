@@ -1,6 +1,6 @@
 {
   "name": "nwjs-builder-phoenix",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "",
   "main": "./dist/lib/index.js",
   "types": "./dist/lib/index.d.ts",
@@ -10,7 +10,7 @@
   },
   "scripts": {
     "prepublish": "npm run build",
-    "test": "npm run build && ava",
+    "test": "npm run build && ava --match \"commandline --concurrent\"",
     "coverage": "nyc ava",
     "build": "tsc --declaration",
     "release": "npm test && standard-version"

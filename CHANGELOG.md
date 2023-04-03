@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.16.0"></a>
+# [1.16.0](https://github.com/tonetechnician/nwjs-builder-phoenix/compare/v1.15.0...v1.16.0) (2023-04-03)
+
+
+### Bug Fixes
+
+* change author details for npm ([c23ca69](https://github.com/tonetechnician/nwjs-builder-phoenix/commit/c23ca69))
+
+
+### Features
+
+* add support for 0.70.0 mac arm64 from corwin-of-amber ([80912a1](https://github.com/tonetechnician/nwjs-builder-phoenix/commit/80912a1))
+
+
+
 <a name="1.15.0"></a>
 # [1.15.0](https://github.com/evshiron/nwjs-builder-phoenix/compare/v1.14.7...v1.15.0) (2018-12-19)
 
